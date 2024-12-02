@@ -1,5 +1,12 @@
-function calculateNetSalary () {
-    // Tax, NHIF, and NSSF values based on the provided links
-    const KRA_TAX_RATES = [
-        { threshold: 24000, rate: 0.1 },
+// Net Salary Calculator
+function calculateNetSalary (basicSalary, benefits) {
+ const grossSalary = basicSalary + benefits;
+ //Calculate NSSF Deduction
+ (Assuming Tier I and Tier II contributions)
+ let nssfDeduction;
+ if (grossSalary <= 18000) {
+    nssfDeduction = grossSalary * 0.06; //6% 0f gross for Tier I
+ }
+
+        
 }
