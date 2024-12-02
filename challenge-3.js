@@ -29,5 +29,43 @@ function calculateNetSalary (basicSalary, benefits) {
      function calculatePAYE(grossSalary) { 
         let taxPayable = 0; 
         let remainingSalary = grossSalary;
+        for (const { threshold, rate } of KRA_TAX_RATES) {
+            { if (remainingSalary > threshold)
+                { taxPayable += threshold * rate;
+                    remainingSalary -= threshold;
+                } else {
+                    taxPayable += remainingSalary * rate;
+                }
+            }
+            return taxPayable;
+}
+// Function to calculate NHIF contribution
+function calculateNHIF(grossSalary) {
+    for (const { maxSalary, rate } of NHIF_RATES) {
+        if (grossSalary <= maxSalary) {
+            return rate;
+        }
+    }
+    return 0; //should never reach here 
+}
+// Function to calculate NSSF contribution
+function calculateNSSF(grossSalary) {
+    return grossSalary * NSSF_RATE;
+}
+// Function to calculate net salary
+const grossSalary = basicSalary + benefits;
+const payee = calculatePAYE(grossSalary);
+const nhif = calculateNHIF(grossSalary);
+const nssf = calculateNSSF(grossSalary);
 
+const netSalary = grossSalary - payee - nhif - nssf;
+
+return{
+    "Gross Salary": grossSalary,
+     "PAYE (Tax)": payee, 
+     "NHIF Deduction": nhif, 
+     "NSSF Deduction": nssf, 
+     "Net Salary": netSalary 
+    };
+ }
 }
