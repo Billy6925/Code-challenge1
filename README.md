@@ -29,4 +29,8 @@ To access theis Code challenge, go to github and then fork and clone it from the
 ##Licence
 Copyright (c) 2024 Billy6925
 
+##Contacts
+You can reach the owner of this repository through: billy.eskein@student.moringaschool.com
+
+
 
