@@ -1,5 +1,5 @@
 # Code-challenge1
-##Description
+# Description
 This code challenge includes three challenges that are hereby explained:
 1. Student Grade Generator.
 Involves writing a function that prompts the user to input student marks. The input should be between 0 and 100. The output should correspond the correct grade, as shown below: 
@@ -20,16 +20,17 @@ Links to an external site.-  Links to an external site.Links to an external site
 
 - www.kra.go.ke/en/individual/calculate-tax/calculating-tax/payeLinks to an external site.
 
-##Installation
+# Installation
 The use of this Code challenge requires one to have node.js installed.
 
-##Navigation.
+# Navigation.
 To access theis Code challenge, go to github and then fork and clone it from the repository *Code-challenge1* using this link: https://github.com/Billy6925/Code-challenge1
 
-##Licence
+# Licence
+MIT Licence.
 Copyright (c) 2024 Billy6925
 
-##Contacts
+# Contacts
 You can reach the owner of this repository through: billy.eskein@student.moringaschool.com
 
 
