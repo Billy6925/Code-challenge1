@@ -19,3 +19,8 @@ if (marks >79) {
 }else if (marks < 40) {
     grade = 'E'
 }
+// Output the grade
+console.log(`The grade for marks ${marks} is: ${grade}`
+}
+// Call the function to prompt the user and display the grade
+inputSudentGrade ( );
