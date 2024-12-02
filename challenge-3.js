@@ -23,5 +23,11 @@ function calculateNetSalary (basicSalary, benefits) {
              { maxSalary: 79999, rate: 1400 }, 
         { maxSalary: Infinity, rate: 1700 }
      ];
-   
+     const NSSF_RATE = 0.06;//NSSF deduction rate
+
+     //Function to calculate PAYE(tax)
+     function calculatePAYE(grossSalary) { 
+        let taxPayable = 0; 
+        let remainingSalary = grossSalary;
+
 }
