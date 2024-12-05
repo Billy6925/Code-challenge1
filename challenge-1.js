@@ -1,3 +1,4 @@
+// Create a function that prompts user to input student marks
 function inputStudentMarks(marks) {
 
     let grade;
