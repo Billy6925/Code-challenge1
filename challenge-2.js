@@ -1,25 +1,14 @@
-function calculatePenalty(vehicleSpeed, speedLimit, penaltyPerIncrement) {
-
-    //calculate the excessSpeed
-    const excessSpeed = Math.max(vehicleSpeed - speedLimit, 0);
-
-    //calculate the number of 5km/s increments over the speedLimit
-    const incrementOverLimit = Math.ceil(excessSpeed/5);
-
-    //calculate the total penalty
-    const totalPenalty = incrementOverLimit * penaltyPerIncrement;
-
-    //calculate demerit points(assuming two points per increment)
-    const demeritPoints = incrementOverLimit * 2;
-
-    //check if the licence should be suspended
+// Function that takes car speed as input and returns demerit points
+function checkSpeed(speed) {
+    if(speed < 70){
+        console.log('Ok');
+// If car speed is more than 70 then the demerit points:
+    }else{
+    const demeritPoints = Math.floor((speed -70) / 5);
+    console.log(`points: ${demeritPoints}`);
+ //If the demerit points are more than 12, the function returns 'License Suspended'   
     if(demeritPoints > 12) {
-        return 'licence suspended';
+        console.log('License Suspended');
     }
-    return totalPenalty;
 }
-const vehicleSpeed = 80;
-const speedLimit = 70;
-const penaltyPerIncrement = 2;
-
-calculatePenalty(vehicleSpeed, speedLimit, penaltyPerIncrement);
+}
