@@ -1,4 +1,4 @@
-
+//Function to input student marks and output grades
 function inputMarks(marks) {
     let grade;
     if(marks > 100 || marks < 0) {
